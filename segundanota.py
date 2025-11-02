@@ -70,15 +70,25 @@ while True:
                     print('-'*50)
                     print(
                     "1 - Comprar produtos e agendar serviços\n"
-                    "2 - Logout\n"
+                    "2 - Agendar serviços\n"
+                    "3 - Sair\n"
                     )
-                    opcao = input("Opção: ")
-                    break
+                    opcao = int(input("Opção: "))
+
+                    if opcao == 1:
+                        comprar = input('o que você dejesa comprar? ')
+                        print('compra feita com sucesso!', comprar)
+                        break 
+                    
+                    produtos.append(comprar)
+
+                        
+                    
 
 
 
-            elif senha and email in admin:
-                while True:
+        elif senha and email in admin:
+            while True:
                     print('')
                     print('-'*50)
                     print('- - - - - - - - - MENU ADMIN - - - - - - - - -')
@@ -93,9 +103,11 @@ while True:
                         "7 - Logout\n"
                     )
                     opcao = input("Opção: ")
+                    break
 
-            else:
-                print("Credenciais não encontradas !") 
+        else:
+            print("Credenciais não encontradas !") 
+
 
 
 # se os dados estiver igual vai logar no primeiro if, tem que arrumar um jeito de nao poder ter as infos iguais
